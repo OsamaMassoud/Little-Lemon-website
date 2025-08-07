@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;500;600;700&family=Karla:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Little Lemon Brand Colors & Theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+
+    /* Little Lemon Primary Colors */
+    --primary: 49 93% 53%; /* Lemon Yellow #F4CE14 */
+    --primary-foreground: 0 0% 20%;
+
+    --secondary: 156 24% 35%; /* Sage Green #495E57 */
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 36 100% 93%; /* Neutral Light #EDEFEE */
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 22 72% 69%; /* Orange #EE9972 */
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 4 76% 44%; /* Highlight Red #BC271A */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 49 93% 53%;
+
+    --radius: 0.75rem;
+
+    /* Little Lemon Brand Color Variables */
+    --lemon: 49 93% 53%; /* #F4CE14 */
+    --lemon-dark: 48 93% 47%; /* #E6BE0A */
+
+    --sage: 156 24% 35%; /* #495E57 */
+    --sage-light: 156 20% 39%; /* #5A6D64 */
+    --sage-dark: 156 28% 29%; /* #3C4A42 */
+
+    --orange: 22 72% 69%; /* #EE9972 */
+    --orange-light: 22 69% 75%; /* #F2B89A */
+    --orange-dark: 22 76% 63%; /* #E8805A */
+
+    --peach: 36 83% 85%; /* #FBDABB */
+    --peach-light: 36 76% 91%; /* #FCECD6 */
+    --peach-dark: 36 90% 79%; /* #F8C799 */
+
+    --neutral-light: 60 9% 93%; /* #EDEFEE */
+    --neutral-dark: 0 0% 20%; /* #333333 */
+
+    --highlight-red: 4 76% 44%; /* #BC271A */
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 156 24% 35%;
+    --foreground: 0 0% 96%;
+
+    --card: 156 28% 29%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 156 28% 29%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 49 93% 53%;
+    --primary-foreground: 0 0% 20%;
+
+    --secondary: 156 20% 39%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 156 28% 29%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 22 72% 69%;
+    --accent-foreground: 0 0% 20%;
+
+    --destructive: 4 76% 44%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 156 28% 29%;
+    --input: 156 28% 29%;
+    --ring: 49 93% 53%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-karla;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-markazi;
+  }
+
+  .lemon-logo {
+    color: hsl(var(--lemon));
+  }
+}
